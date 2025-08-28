@@ -222,8 +222,9 @@ int main() {
 		glm::mat4 model=glm::mat4(1);
 		glm::mat4 view=glm::mat4(1);
 	
-		view = glm::translate(view, glm::vec3(0.0f,0.0f,-20.0f)); //Cámara 
-		model = glm::rotate( model, 0.5f, glm::vec3( 1.0f, 0.0f, 0.0f ) ); // rotación
+		view = glm::translate(view, glm::vec3(0.0f,0.0f,-8.0f)); //Cámara 
+		//Primer cubo
+		model = glm::rotate( model, 0.5f, glm::vec3( 0.1f, -0.15f, 0.0f ) ); // rotación x sube el cubo, 
 		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); //tamaño
 		//view = glm::translate( view, glm::vec3( screenWidth / 2, screenHeight / 2,-700.0f ) ); // use with orthographic projection
 		
@@ -240,21 +241,29 @@ int main() {
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 	//Segundo cubo:
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(3.0f, 0.0f, 0.0f)); 
-		model = glm::rotate(model, 0.5f, glm::vec3(0.0f, 3.0f, 2.0f)); // rotación
-		model = glm::scale(model, glm::vec3(4.0f, 6.0f, 2.0f)); //tamaño
+		model = glm::translate(model, glm::vec3(1.2f, 0.0f, 0.0f));
+		model = glm::rotate(model, 2.0708f, glm::vec3(0.1f, -0.15f, 0.0f)); // rotación
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); //tamaño
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		//Tercer cubo:
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-3.0f, 0.0f, 0.0f));
-		model = glm::rotate(model, 0.5f, glm::vec3(0.0f, 3.0f, 0.0f)); // rotación
-		model = glm::scale(model, glm::vec3(1.0f, 3.0f, 1.0f)); //tamaño
+		model = glm::translate(model, glm::vec3(-1.2f, 0.0f, 0.0f));
+		model = glm::rotate(model, 0.5f, glm::vec3(0.1f, -0.15f, 0.0f)); // rotación
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); //tamaño
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
-		// Swap the screen buffers
+		////cuarto cubo
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 1.1f, 0.25f));
+		model = glm::rotate(model, 0.5f, glm::vec3(0.1f, -0.15f, 0.0f)); // rotación
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); //tamaño
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+		 //Swap the screen buffers
 		glfwSwapBuffers(window);
-	
+
+
 	
 	}
 	glDeleteVertexArrays(1, &VAO);
