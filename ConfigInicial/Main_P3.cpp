@@ -242,7 +242,9 @@ int main() {
 	//Segundo cubo:
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(1.2f, 0.0f, 0.0f));
-		model = glm::rotate(model, 2.0708f, glm::vec3(0.1f, -0.15f, 0.0f)); // rotación
+		model = glm::rotate(model, 0.5f, glm::vec3(0.1f, -0.15f, 0.0f)); // rotación
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f)); //Rotar sobre su eje x
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(1.0f, 0.0f, 0.0f)); //rotar sobre su eje y
 		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); //tamaño
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -250,6 +252,8 @@ int main() {
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(-1.2f, 0.0f, 0.0f));
 		model = glm::rotate(model, 0.5f, glm::vec3(0.1f, -0.15f, 0.0f)); // rotación
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(1.0f, 0.0f, 0.0f)); //Segunda rotación 180 grados en x (arriba)
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f)); //Tercera rotación de 180 grados para mostrar otra cara
 		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); //tamaño
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -257,6 +261,7 @@ int main() {
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(0.0f, 1.1f, 0.25f));
 		model = glm::rotate(model, 0.5f, glm::vec3(0.1f, -0.15f, 0.0f)); // rotación
+		model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f)); //Segunda rotación 180 grados
 		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); //tamaño
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
