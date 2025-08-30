@@ -1,5 +1,5 @@
-//Previo 3
-//24 de agosto de 2025
+//Practica 3
+//27 de agosto de 2025
 //Palafox Jimenez Rául
 //422132844
 #include<iostream>
