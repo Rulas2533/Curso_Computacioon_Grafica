@@ -1,6 +1,6 @@
-//Previo 4
-//30 de agosto de 2025
-//Palafox Jimenez Rául
+//Practica 4
+//4 de septiembre de 2025
+//Palafox Jimenez Raul
 //422132844
 #include<iostream>
 #include<vector>
@@ -196,7 +196,7 @@ int main() {
         model = glm::scale(model, glm::vec3(2.2f, 1.87f, 0.015));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glDrawArrays(GL_TRIANGLES, 0, 36);
-        //Pata izq
+        ////Pata izq
         glBindVertexArray(VAOs[1]);
         model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(0.9f, -2.4f, 0.8f));
@@ -224,7 +224,7 @@ int main() {
         model = glm::scale(model, glm::vec3(0.6f, 0.7f, 0.1f));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glDrawArrays(GL_TRIANGLES, 0, 36); 
-        //Brazo Izqueierdo 
+        ////Brazo Izqueierdo 
         glBindVertexArray(VAOs[0]);
         model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(1.8f, -0.9f, 0.0f));
@@ -238,7 +238,7 @@ int main() {
         model = glm::scale(model, glm::vec3(1.5f, 0.75f, 0.75f));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glDrawArrays(GL_TRIANGLES, 0, 36);
-        //Garras
+        ////Garras
         //Mano izq
         //medio
         glBindVertexArray(VAOs[4]);
@@ -247,7 +247,7 @@ int main() {
         model = glm::scale(model, glm::vec3(0.15f, 0.15f, 0.15f));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glDrawArrays(GL_TRIANGLES, 0, 36);
-        //otra
+        ////otra
         glBindVertexArray(VAOs[4]);
         model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(-2.6f, -0.6f, 0.25f));
@@ -301,7 +301,6 @@ int main() {
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
-        //fin
         //Patita izq garras
         glBindVertexArray(VAOs[4]);
         model = glm::mat4(1.0f);
