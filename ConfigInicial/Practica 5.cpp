@@ -354,13 +354,13 @@ void Inputs(GLFWwindow* window) {
     
     // Control de codo con límites
     if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS) {
-        // Límite superior: 90 grados
+        // Límite inferior 0 grados (solo puede volver a la posición inicial)
         if (codo < 0.0f) {
             codo += 0.18f;
         }
     }
     if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS) {
-        // Límite inferior: 0 grados (solo puede volver a la posición inicial)
+        // Límite superior 90 grados
         if (codo >= -90.0f) {
             codo -= 0.18f;
         }
