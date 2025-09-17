@@ -18,20 +18,23 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shader\core.frag">
+    <None Include="..\Main\Shader\modelLoading.frag">
       <Filter>Archivos de encabezado\Shader</Filter>
     </None>
-    <None Include="Shader\core.vs">
+    <None Include="..\Main\Shader\modelLoading.vs">
       <Filter>Archivos de encabezado\Shader</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Shader.h">
+    <ClInclude Include="..\Main\Camera.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Main\Shader.h">
       <Filter>Archivos de encabezado\Shader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Practica 5.cpp">
+    <ClCompile Include="Carga de Modelos.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
