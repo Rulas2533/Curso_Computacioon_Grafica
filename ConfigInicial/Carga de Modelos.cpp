@@ -96,7 +96,12 @@ int main( )
     // Load models
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
     Model dog((char*)"Models/RedDog.obj");
-  
+    Model helm((char*)"Models/casc.obj");
+    Model Door((char*)"Models/door2.obj");
+    Model room((char*)"Models/room.obj");
+    Model pc((char*)"Models/BM86.obj");
+    Model tub((char*)"Models/Sci-Fi_09_Free.obj");
+    Model atm((char*)"Models/AM.obj");
 
     // Game loop
     while (!glfwWindowShouldClose(window))
@@ -120,14 +125,52 @@ int main( )
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 
-        // Draw the loaded model
+        // DPerro
         glm::mat4 model(1);
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         dog.Draw(shader);
-        model = glm::translate(model, glm::vec3(3.0f, 0.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
-        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-        dog.Draw(shader);
+
+        // Casco
+        glm::mat4 model2(1);
+        model2 = glm::translate(model2, glm::vec3(0.0f, 0.25f, 0.2f));
+        model2 = glm::scale(model2, glm::vec3(0.05f, 0.05f, 0.05f));
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model2));
+        helm.Draw(shader);
+
+        //Puerta
+        glm::mat4 model3(1);
+        model3 = glm::translate(model3, glm::vec3(-3.5f, -0.3f, 0.5f));
+        model3 = glm::scale(model3, glm::vec3(0.1f, 0.1f, 0.1f));
+        model3 = glm::rotate(model3, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model3));
+        Door.Draw(shader);
+        //cuarto
+        glm::mat4 model4(1);
+        model4 = glm::translate(model4, glm::vec3(0.0f, -0.5f, -3.5f));
+        model4 = glm::scale(model4, glm::vec3(0.3f, 0.3f, 0.3f));
+        model4 = glm::rotate(model4, glm::radians(270.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model4));
+        room.Draw(shader);
+        //Computadora
+        glm::mat4 model5(1);
+        model5 = glm::translate(model5, glm::vec3(0.0f, -0.4f, -1.0f));
+        model5 = glm::scale(model5, glm::vec3(2.5f, 2.5f, 2.5f));
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model5));
+        pc.Draw(shader);
+        //Tuberias
+        glm::mat4 model6(1);
+        model6 = glm::translate(model6, glm::vec3(0.0f, 2.3f, 0.0f));
+        model6 = glm::scale(model6, glm::vec3(0.009f, 0.003f, 0.003f));
+        model6 = glm::rotate(model6, glm::radians(90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model6));
+        tub.Draw(shader);
+        //ATM 
+        glm::mat4 model7(1);
+        model7 = glm::translate(model7, glm::vec3(2.3f, -0.3f, 0.0f));
+        model7 = glm::scale(model7, glm::vec3(1.0f, 1.0f, 1.0f));
+        model7 = glm::rotate(model7, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model7));
+        atm.Draw(shader);
         // Swap the buffers
         glfwSwapBuffers( window );
     }
