@@ -1,3 +1,8 @@
+//Palafox Jimenez Raúl
+//Practica 6
+//No. De cuenta: 422132844
+//19/Sept/2025
+
 // Std. Includes
 #include <string>
 
