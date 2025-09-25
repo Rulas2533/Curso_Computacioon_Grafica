@@ -29,7 +29,7 @@
     <ClInclude Include="..\Main\Shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Texturizado.cpp" />
+    <ClCompile Include="Practica7.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
