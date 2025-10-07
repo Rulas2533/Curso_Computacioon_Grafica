@@ -21,15 +21,21 @@
   <ItemGroup>
     <None Include="..\Main\Shader\modelLoading.frag" />
     <None Include="..\Main\Shader\modelLoading.vs" />
+    <None Include="Shader\core.frag" />
+    <None Include="Shader\core.vs" />
     <None Include="Shader\lamp.frag" />
     <None Include="Shader\lamp.vs" />
+    <None Include="Shader\lighting.frag" />
+    <None Include="Shader\lighting.vs" />
+    <None Include="Shader\modelLoading.frag" />
+    <None Include="Shader\modelLoading.vs" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Main\Camera.h" />
     <ClInclude Include="..\Main\Shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Practica7.cpp" />
+    <ClCompile Include="fuentesDeLuz.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

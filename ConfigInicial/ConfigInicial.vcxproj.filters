@@ -30,6 +30,24 @@
     <None Include="Shader\lamp.vs">
       <Filter>Archivos de encabezado\Shader</Filter>
     </None>
+    <None Include="Shader\core.frag">
+      <Filter>Archivos de encabezado\Shader</Filter>
+    </None>
+    <None Include="Shader\core.vs">
+      <Filter>Archivos de encabezado\Shader</Filter>
+    </None>
+    <None Include="Shader\lighting.frag">
+      <Filter>Archivos de encabezado\Shader</Filter>
+    </None>
+    <None Include="Shader\lighting.vs">
+      <Filter>Archivos de encabezado\Shader</Filter>
+    </None>
+    <None Include="Shader\modelLoading.frag">
+      <Filter>Archivos de encabezado\Shader</Filter>
+    </None>
+    <None Include="Shader\modelLoading.vs">
+      <Filter>Archivos de encabezado\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Main\Camera.h">
@@ -40,7 +58,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Practica7.cpp">
+    <ClCompile Include="fuentesDeLuz.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

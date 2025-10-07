@@ -97,7 +97,8 @@ int main()
 
     // Load models
     glm::mat4 projection = glm::perspective(camera.GetZoom(), (float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, 0.1f, 100.0f);
-    Model dog((char*)"Models/Dadof.obj");
+    Model dog((char*)"Models/DadoPoke.obj");
+
 
 
     // Game loop
