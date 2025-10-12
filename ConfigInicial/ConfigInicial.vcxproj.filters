@@ -58,7 +58,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="fuentesDeLuz.cpp">
+    <ClCompile Include="p8.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
