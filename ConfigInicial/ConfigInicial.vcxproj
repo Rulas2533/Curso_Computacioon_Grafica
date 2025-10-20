@@ -35,7 +35,7 @@
     <ClInclude Include="..\Main\Shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="p8.cpp" />
+    <ClCompile Include="Practica9.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

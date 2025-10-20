@@ -1,5 +1,5 @@
 // Palafox Jimenez Raúl
-// PREVIO 8
+// PREVIO 
 // No. De Cuenta: 422132844
 // 28 de Septiembre de 2025
 #include <iostream>
@@ -144,7 +144,7 @@ int main()
     Shader lightingShader("Shader/lighting.vs", "Shader/lighting.frag");
     Shader lampShader("Shader/lamp.vs", "Shader/lamp.frag");
 
-    Model Dog((char*)"Models/ball.obj");
+    Model Dog((char*)"Models/ps2.obj");
     Model Piso((char*)"Models/piso.obj");
 
     // First, set the container's VAO (and VBO)
@@ -297,6 +297,8 @@ int main()
         Piso.Draw(lightingShader);
 
         model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.025f)); // Escala uniforme al 10%
+        model = glm::translate(model, glm::vec3(2.0f, -0.5f, -8.0f)); // Derecha, abajo, adelante
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
