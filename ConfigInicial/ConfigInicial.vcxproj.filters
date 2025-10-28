@@ -58,7 +58,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Practica9.cpp">
+    <ClCompile Include="Practica10.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
