@@ -58,7 +58,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="maquinaDeEstados.cpp">
+    <ClCompile Include="ProyectoF.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
