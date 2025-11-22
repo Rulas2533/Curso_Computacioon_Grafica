@@ -35,7 +35,7 @@
     <ClInclude Include="..\Main\Shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ProyectoF.cpp" />
+    <ClCompile Include="JanetTeAmo.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

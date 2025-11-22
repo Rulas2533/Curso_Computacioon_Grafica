@@ -59,6 +59,7 @@ uniform PointLight pointLights[NUMBER_OF_POINT_LIGHTS];
 uniform SpotLight spotLight;
 uniform Material material;
 uniform int transparency;
+uniform float transparencyAlpha; // AÑADE ESTA LÍNEA
 
 // Function prototypes
 vec3 CalcDirLight( DirLight light, vec3 normal, vec3 viewDir );
@@ -82,11 +83,25 @@ void main( )
     
     // Spot light
     result += CalcSpotLight( spotLight, norm, FragPos, viewDir );
- 	
-    color = vec4( result,texture(material.diffuse, TexCoords).rgb );
-	  if(color.a < 0.1 && transparency==1)
+    
+    // Get texture alpha
+    float alpha = texture(material.diffuse, TexCoords).a;
+    
+    // Handle transparency
+if (transparency == 1) 
+{
+    // For transparent objects, use our custom alpha value
+    color = vec4(result, transparencyAlpha);
+    
+    // Discard very transparent fragments to avoid depth issues
+    if (transparencyAlpha < 0.1)
         discard;
-
+}
+else 
+{
+    // For opaque objects, always use alpha = 1.0
+    color = vec4(result, 1.0);
+}
 }
 
 // Calculates the color when using a directional light.
